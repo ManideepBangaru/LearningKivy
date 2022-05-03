@@ -1,4 +1,3 @@
-import kivy
 from kivy.app import App
 from kivy.uix.label import Label
 from kivy.uix.gridlayout import GridLayout
@@ -37,7 +36,21 @@ class MyGridLayout(GridLayout):
 
         # Create a submit button
         self.submit = Button(text="Submit",font_size = 30)
+        self.submit.bind(on_press=self.press)
         self.add_widget(self.submit)
+
+    def press(self,instance):
+        name = self.name.text
+        pizza = self.pizza.text
+        color = self.Color.text
+        # print to the terminal
+        # print("Hello %s, you like %s and your favourite color is %s"%(name,pizza,color))
+        # print to the screen
+        self.add_widget(Label(text="Hello %s, you like %s and your favourite color is %s"%(name,pizza,color),font_size=20))
+        # clear the input boxes
+        self.name.text = ""
+        self.pizza.text = ""
+        self.Color.text = ""
 
 
 class MyApp(App):
