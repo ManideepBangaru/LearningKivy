@@ -1,3 +1,4 @@
+#: import utils kivy.utils
 <MyGridLayout>
 
     name:name
@@ -32,6 +33,7 @@
                 id:color
                 multiline:False
                 font_size:20
+                background_color:utils.get_color_from_hex("#d9bc6c")
 
         Button:
             text:"Submit"
@@ -40,4 +42,3 @@
             #RGB - A
             background_normal : ""
             background_color : (1,0,0,1)
-

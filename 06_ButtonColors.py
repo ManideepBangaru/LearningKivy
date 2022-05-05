@@ -3,8 +3,6 @@ from kivy.uix.widget import Widget
 from kivy.properties import ObjectProperty
 from kivy.lang import Builder
 
-# Builder.load_file("my.kv")
-
 class MyGridLayout(Widget):
     name = ObjectProperty(None)
     pizza = ObjectProperty(None)
