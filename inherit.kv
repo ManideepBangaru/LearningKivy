@@ -1,0 +1,36 @@
+#: import utils kivy.utils
+
+<Button>
+    font_size:32
+
+<Label>
+    font_size:18
+
+<TextInput>
+    font_size:18
+
+<MyLayout>
+    BoxLayout:
+        orientation:"vertical"
+        size:root.width,root.height
+        padding:50
+        spacing:15
+ 
+        Label:
+            text:"Enter your Name"
+        TextInput:
+            multiline:False
+        
+        Label:
+            text:"Your Favorite pizza"
+        TextInput:
+            multiline:False
+        
+        Button:
+            text:"Submit"
+            background_normal : ""
+            background_color : utils.get_color_from_hex("#4a5942")
+        Button:
+            text:"Clear"
+            background_normal : ""
+            background_color : utils.get_color_from_hex("#c21319")
