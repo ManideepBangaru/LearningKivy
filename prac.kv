@@ -1,0 +1,20 @@
+<MyLayout>
+
+    BoxLayout:
+        cols:1
+        orientation:"vertical"
+        size:root.width,root.height
+
+        padding : 50
+        spacing : 50
+
+        Label:
+            text:"First Name"
+        TextInput:
+            id:"name"
+            multiline:False
+        
+        Button:
+            text:"submit"
+            pos_hint:{"center_x":0.5}
+            size_hint:(.5,.5)
